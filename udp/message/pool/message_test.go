@@ -6,8 +6,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	"github.com/plgd-dev/go-coap/v2/udp/message/pool"
+	"github.com/huytn/go-coap/v2/message/codes"
+	"github.com/huytn/go-coap/v2/udp/message/pool"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

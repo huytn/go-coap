@@ -3,7 +3,7 @@ package blockwise
 import (
 	"fmt"
 
-	"github.com/plgd-dev/go-coap/v2/pkg/sync"
+	"github.com/huytn/go-coap/v2/pkg/sync"
 )
 
 func messageToGuardTransferKey(msg Message) string {

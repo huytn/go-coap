@@ -8,10 +8,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	"github.com/plgd-dev/go-coap/v2/message/pool"
-	udp "github.com/plgd-dev/go-coap/v2/udp/message"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/codes"
+	"github.com/huytn/go-coap/v2/message/pool"
+	udp "github.com/huytn/go-coap/v2/udp/message"
 )
 
 type Message struct {

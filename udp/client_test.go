@@ -12,15 +12,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	"github.com/plgd-dev/go-coap/v2/mux"
-	coapNet "github.com/plgd-dev/go-coap/v2/net"
-	"github.com/plgd-dev/go-coap/v2/net/monitor/inactivity"
-	"github.com/plgd-dev/go-coap/v2/pkg/runner/periodic"
-	"github.com/plgd-dev/go-coap/v2/udp/client"
-	udpMessage "github.com/plgd-dev/go-coap/v2/udp/message"
-	"github.com/plgd-dev/go-coap/v2/udp/message/pool"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/codes"
+	"github.com/huytn/go-coap/v2/mux"
+	coapNet "github.com/huytn/go-coap/v2/net"
+	"github.com/huytn/go-coap/v2/net/monitor/inactivity"
+	"github.com/huytn/go-coap/v2/pkg/runner/periodic"
+	"github.com/huytn/go-coap/v2/udp/client"
+	udpMessage "github.com/huytn/go-coap/v2/udp/message"
+	"github.com/huytn/go-coap/v2/udp/message/pool"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sync/semaphore"
@@ -125,7 +125,7 @@ func TestClientConnGet(t *testing.T) {
 	err = m.Handle("/empty", mux.HandlerFunc(func(w mux.ResponseWriter, r *mux.Message) {
 		assert.Equal(t, codes.GET, r.Code)
 		// Calling SetResponse was failing with an EOF error when the reader is empty
-		// https://github.com/plgd-dev/go-coap/issues/157
+		// https://github.com/huytn/go-coap/issues/157
 		errS := w.SetResponse(codes.Content, message.TextPlain, bytes.NewReader([]byte{}))
 		require.NoError(t, errS)
 		require.NotEmpty(t, w.Client())

@@ -10,14 +10,14 @@ import (
 	"math/big"
 	"time"
 
+	"github.com/huytn/go-coap/v2/dtls"
+	"github.com/huytn/go-coap/v2/examples/dtls/pki"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/codes"
+	"github.com/huytn/go-coap/v2/mux"
+	"github.com/huytn/go-coap/v2/net"
+	"github.com/huytn/go-coap/v2/udp/client"
 	piondtls "github.com/pion/dtls/v2"
-	"github.com/plgd-dev/go-coap/v2/dtls"
-	"github.com/plgd-dev/go-coap/v2/examples/dtls/pki"
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	"github.com/plgd-dev/go-coap/v2/mux"
-	"github.com/plgd-dev/go-coap/v2/net"
-	"github.com/plgd-dev/go-coap/v2/udp/client"
 )
 
 func onNewClientConn(cc *client.ClientConn, dtlsConn *piondtls.Conn) {

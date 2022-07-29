@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net"
 
-	coapNet "github.com/plgd-dev/go-coap/v2/net"
-	"github.com/plgd-dev/go-coap/v2/udp/client"
-	"github.com/plgd-dev/go-coap/v2/udp/message"
-	"github.com/plgd-dev/go-coap/v2/udp/message/pool"
+	coapNet "github.com/huytn/go-coap/v2/net"
+	"github.com/huytn/go-coap/v2/udp/client"
+	"github.com/huytn/go-coap/v2/udp/message"
+	"github.com/huytn/go-coap/v2/udp/message/pool"
 )
 
 // Discover sends GET to multicast or unicast address and waits for responses until context timeouts or server shutdown.

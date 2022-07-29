@@ -5,11 +5,11 @@ import (
 	"log"
 	gonet "net"
 
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	"github.com/plgd-dev/go-coap/v2/mux"
-	"github.com/plgd-dev/go-coap/v2/net"
-	"github.com/plgd-dev/go-coap/v2/udp"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/codes"
+	"github.com/huytn/go-coap/v2/mux"
+	"github.com/huytn/go-coap/v2/net"
+	"github.com/huytn/go-coap/v2/udp"
 )
 
 func handleMcast(w mux.ResponseWriter, r *mux.Message) {

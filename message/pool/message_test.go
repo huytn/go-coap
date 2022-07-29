@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/pool"
-	"github.com/plgd-dev/go-coap/v2/test/net"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/pool"
+	"github.com/huytn/go-coap/v2/test/net"
 	"github.com/stretchr/testify/require"
 )
 

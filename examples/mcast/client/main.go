@@ -12,11 +12,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/plgd-dev/go-coap/v2/net"
-	"github.com/plgd-dev/go-coap/v2/udp"
-	"github.com/plgd-dev/go-coap/v2/udp/client"
-	"github.com/plgd-dev/go-coap/v2/udp/message"
-	"github.com/plgd-dev/go-coap/v2/udp/message/pool"
+	"github.com/huytn/go-coap/v2/net"
+	"github.com/huytn/go-coap/v2/udp"
+	"github.com/huytn/go-coap/v2/udp/client"
+	"github.com/huytn/go-coap/v2/udp/message"
+	"github.com/huytn/go-coap/v2/udp/message/pool"
 )
 
 // https://blog.packagecloud.io/eng/2016/06/22/monitoring-tuning-linux-networking-stack-receiving-data/#monitoring-network-data-processing

@@ -8,9 +8,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/pool"
-	tcp "github.com/plgd-dev/go-coap/v2/tcp/message"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/pool"
+	tcp "github.com/huytn/go-coap/v2/tcp/message"
 )
 
 type Message struct {

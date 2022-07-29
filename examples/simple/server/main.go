@@ -5,10 +5,10 @@ import (
 	"errors"
 	"log"
 
-	coap "github.com/plgd-dev/go-coap/v2"
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	"github.com/plgd-dev/go-coap/v2/mux"
+	coap "github.com/huytn/go-coap/v2"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/codes"
+	"github.com/huytn/go-coap/v2/mux"
 )
 
 func loggingMiddleware(next mux.Handler) mux.Handler {

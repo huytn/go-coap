@@ -7,8 +7,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/plgd-dev/go-coap/v2/net"
-	"github.com/plgd-dev/go-coap/v2/tcp"
+	"github.com/huytn/go-coap/v2/net"
+	"github.com/huytn/go-coap/v2/tcp"
 )
 
 func ExampleClientConn_Get() {

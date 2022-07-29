@@ -12,10 +12,10 @@ import (
 	"time"
 
 	"github.com/dsnet/golib/memfile"
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	"github.com/plgd-dev/go-coap/v2/pkg/cache"
-	udpMessage "github.com/plgd-dev/go-coap/v2/udp/message"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/codes"
+	"github.com/huytn/go-coap/v2/pkg/cache"
+	udpMessage "github.com/huytn/go-coap/v2/udp/message"
 	"golang.org/x/sync/semaphore"
 )
 

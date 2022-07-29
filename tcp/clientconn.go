@@ -9,14 +9,14 @@ import (
 	"net"
 	"time"
 
-	"github.com/plgd-dev/go-coap/v2/message"
-	"github.com/plgd-dev/go-coap/v2/message/codes"
-	coapNet "github.com/plgd-dev/go-coap/v2/net"
-	"github.com/plgd-dev/go-coap/v2/net/blockwise"
-	"github.com/plgd-dev/go-coap/v2/net/monitor/inactivity"
-	"github.com/plgd-dev/go-coap/v2/pkg/runner/periodic"
-	"github.com/plgd-dev/go-coap/v2/pkg/sync"
-	"github.com/plgd-dev/go-coap/v2/tcp/message/pool"
+	"github.com/huytn/go-coap/v2/message"
+	"github.com/huytn/go-coap/v2/message/codes"
+	coapNet "github.com/huytn/go-coap/v2/net"
+	"github.com/huytn/go-coap/v2/net/blockwise"
+	"github.com/huytn/go-coap/v2/net/monitor/inactivity"
+	"github.com/huytn/go-coap/v2/pkg/runner/periodic"
+	"github.com/huytn/go-coap/v2/pkg/sync"
+	"github.com/huytn/go-coap/v2/tcp/message/pool"
 )
 
 var defaultDialOptions = func() dialOptions {
