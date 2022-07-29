@@ -7,6 +7,8 @@ import (
 	"fmt"
 	"io"
 	"net"
+	"strconv"
+	"strings"
 	"time"
 
 	"github.com/dsnet/golib/memfile"
@@ -16,6 +18,11 @@ import (
 	udpMessage "github.com/plgd-dev/go-coap/v2/udp/message"
 	"golang.org/x/sync/semaphore"
 )
+
+// For est over coap
+const (
+	BlockNumberKeyName = "blockNumber"
+) // For est over coap
 
 // Block Opion value is represented: https://tools.ietf.org/html/rfc7959#section-2.2
 //  0
@@ -382,7 +389,23 @@ func (b *BlockWise) WriteMessage(remoteAddr net.Addr, request Message, maxSZX SZ
 	if err != nil {
 		return fmt.Errorf("cannot write message: %w", err)
 	}
-	startSendingMessageBlock, err := EncodeBlockOption(maxSZX, 0, true)
+	// For est over coap
+	var bn int64 = 0
+	ary, err := request.Options().Queries()
+	if err == nil {
+		if len(ary) >= 0 {
+			for _, str := range ary {
+				o := strings.Split(str, "=")
+				if len(o) == 2 && o[0] == BlockNumberKeyName {
+					bn, err = strconv.ParseInt(o[1], 10, 64)
+					if err != nil {
+						bn = 0
+					}
+				}
+			}
+		}
+	}
+	startSendingMessageBlock, err := EncodeBlockOption(maxSZX, bn, true) // For est over coap
 	if err != nil {
 		return fmt.Errorf("cannot encode start sending message block option(%v,%v,%v): %w", maxSZX, 0, true, err)
 	}
