@@ -3,7 +3,7 @@ package cache
 import (
 	"time"
 
-	kitSync "github.com/huytn/kit/v2/sync"
+	kitSync "github.com/huytn/go-coap/v2/sync"
 )
 
 func DefaultOnExpire(d interface{}) {
